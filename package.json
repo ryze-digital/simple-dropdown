@@ -1,0 +1,30 @@
+{
+  "name": "@ryze-digital/simple-dropdown",
+  "description": "",
+  "license": "UNLICENSED",
+  "version": "0.1.0",
+  "author": "RYZE Digital GmbH <kontakt@ryze-digital.de> (https://www.ryze-digital.de/)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "stylelint src/styles/**",
+    "lint-fix": "npm run lint -- --fix",
+    "build": "npm-run-all --parallel build:*",
+    "build:styles": "npm run sass:build",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:styles": "npm run sass:watch",
+    "sass:build": "sass demos/demo.scss:demos/build/demo.css --no-source-map --load-path=node_modules",
+    "sass:watch": "sass demos/demo.scss:demos/build/demo.css --no-source-map --load-path=node_modules --watch",
+    "prebuild": "node pre-build.js"
+  },
+  "dependencies": {
+    "@ryze-digital/scss-utilities": "^1.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@ryze-digital/stylelint-config-website": "^1.0.0-beta.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "peerDependencies": {
+    "@ryze-digital/scss-utilities": "^1.0.0-beta.0"
+  }
+}

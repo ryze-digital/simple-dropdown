@@ -1,0 +1,67 @@
+@use "sass:map";
+@use "sass:meta";
+@use "@ryze-digital/scss-utilities";
+@use "config";
+
+/// Fügt Stile für Container ein.
+@mixin container() {
+    position: relative;
+}
+
+/// Fügt Stile und Icons für Button ein.
+@mixin button() {
+    $icon-indicator: config.get("icon", "indicator");
+    $icon-closed: config.get("icon", "closed");
+    $icon-opened: config.get("icon", "opened");
+    
+    @if ($icon-closed == null or $icon-closed == "") {
+        @error "The config option icon.closed is not defined. You have to configure icon.closed in order to use the @mixin icon-closed.";
+    }
+    
+    @if ($icon-opened == null or $icon-opened == "") {
+        @error "The config option icon.opened is not defined. You have to configure icon.opened in order to use the @mixin icon-opened.";
+    }
+    
+    display: flex;
+    align: {
+        items: center;
+    }
+    @if ($icon-indicator != null and $icon-indicator != "") {
+        &::before {
+            @include scss-utilities.icon($icon-indicator);
+            margin: {
+                right: config.get("icon", "spacing");
+            }
+        }
+    }
+    &::after {
+        @include scss-utilities.icon($icon-closed);
+        margin: {
+            left: config.get("icon", "spacing");
+        }
+    }
+    @at-root :focus-within#{&} {
+        &::after {
+            @include scss-utilities.icon($icon-opened, false);
+        }
+    }
+}
+
+/// Fügt Stile für Panel ein.
+/// @param {String} $direction [config.get("direction")]
+@mixin panel($direction: config.get("direction")) {
+    display: none;
+    position: absolute;
+
+    @if ($direction != "up" and $direction != "down") {
+        @warn meta.inspect($direction) + " was passed to flyout mixin, which is not a valid value (Please use 'up' or 'down').";
+    }
+
+    @if ($direction == "up") {
+        bottom: 100%;
+    }
+
+    @at-root :focus-within#{&} {
+        display: block;
+    }
+}

@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "@ryze-digital/scss-utilities";
+
+/// Private Variable, die die Sprachwechsel Standard-Konfiguration beinhaltet.
+/// Zum Ändern der Konfiguration kann das **configure** Mixin verwendet werden.
+/// @access public
+/// @type Map
+/// @prop {String} icon.indicator [null] - Name des Icons zur Identifizierung des Sprachwechsels
+/// @prop {String} icon.closed [null] - Name des Icons im geschlossenen Zustand
+/// @prop {String} icon.opened [null] - Name des Icons im geöffneten Zustand
+/// @prop {Number} icon.spacing [null] - Abstand zwischen Icons und Button-Text
+/// @prop {String} direction [up] - Richtung, in die sich das Flyout öffnet
+$_config: (
+    "icon": (
+        "indicator": null,
+        "closed": null,
+        "opened": null,
+        "spacing": null,
+    ),
+    "direction": "down"
+);
+
+/// Ermöglicht das Konfigurieren der Sprachwechsel-Komponente.
+/// @param {Map} $config
+@mixin configure($config) {
+    $_config: map.deep-merge($_config, $config) !global;
+}
+
+/// Ermöglicht Zugriff auf Werte aus der internen Konfiguration.
+/// @param {String} $key
+@function get($key...) {
+    @return map.get($_config, $key...);
+}

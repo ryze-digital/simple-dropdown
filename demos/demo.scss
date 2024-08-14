@@ -1,0 +1,21 @@
+@use "demo-icons" as icons;
+@use "../index" as simple-dropdown;
+
+@include simple-dropdown.configure((
+    "icon": (
+        "indicator": icons.$translate,
+        "opened": icons.$chevron-up,
+        "closed": icons.$chevron-down,
+        "spacing": 0.5rem
+    )
+));
+
+.simple-dropdown {
+    @include simple-dropdown.container();
+    .panel {
+        @include simple-dropdown.panel();
+    }
+    button {
+        @include simple-dropdown.button();
+    }
+}
