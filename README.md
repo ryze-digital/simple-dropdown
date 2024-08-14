@@ -1,5 +1,7 @@
 # RYZE Digital Simple Dropdown
 
+![Run linter(s) workflow status](https://github.com/ryze-digital/simple-dropdown/actions/workflows/run-lint.yml/badge.svg)
+
 ## Install
 
 ```sh
