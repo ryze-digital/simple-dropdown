@@ -1,6 +1,6 @@
 {
   "name": "@ryze-digital/simple-dropdown",
-  "description": "",
+  "description": "Creates a very basic CSS-only dropdown panel",
   "license": "UNLICENSED",
   "version": "0.1.0",
   "author": "RYZE Digital GmbH <kontakt@ryze-digital.de> (https://www.ryze-digital.de/)",
