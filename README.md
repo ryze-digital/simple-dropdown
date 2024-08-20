@@ -10,6 +10,21 @@ npm i @ryze-digital/simple-dropdown
 
 ## Usage
 
+### HTML
+
+You can change the HTML to your needs if necessary, as long as you include the mixins (see Scss) correctly.
+
+```html
+<div class="simple-dropdown" tabindex="0">
+    <button type="button">
+        <span>Your button label</span>
+    </button>
+    <div class="panel">
+        Your dropdown content
+    </div>
+</div>
+```
+
 ### Scss
 
 ```scss
