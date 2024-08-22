@@ -52,7 +52,7 @@ Use the provided `configure` mixin to define your dropdown defaults.
 Check out [the actual configure mixin](src/styles/_config.scss) for better understanding.
 </details>
 
-There is a separate mixin for each element in the accordion so styles can be applied to any markup.
+There is a separate mixin for each element of simple dropdown so styles can be applied to any markup.
 
 ```scss
 .simple-dropdown {
