@@ -9,7 +9,7 @@
   "repository": "github:ryze-digital/simple-dropdown",
   "scripts": {
     "lint": "stylelint src/styles/**",
-    "lint-fix": "npm run lint -- --fix",
+    "lint-fix": "prettier src/styles/** --write && npm run lint -- --fix",
     "build": "npm-run-all --parallel build:*",
     "build:styles": "npm run sass:build",
     "watch": "npm-run-all --parallel watch:*",
@@ -22,6 +22,7 @@
     "@ryze-digital/scss-utilities": "^1.0.0-beta.0"
   },
   "devDependencies": {
+    "@ryze-digital/prettier-config-website": "^1.0.0",
     "@ryze-digital/stylelint-config-website": "^1.0.0",
     "npm-run-all": "^4.1.5"
   },
