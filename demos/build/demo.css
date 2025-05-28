@@ -21,7 +21,7 @@
   align-items: center;
 }
 .simple-dropdown button::before {
-  content: "\e902";
+  content: "\e902"/"";
   /* stylelint-disable-next-line declaration-no-important */
   font-family: "icomoon" !important;
   font-style: normal;
@@ -35,7 +35,7 @@
   margin-right: 0.5rem;
 }
 .simple-dropdown button::after {
-  content: "\e900";
+  content: "\e900"/"";
   /* stylelint-disable-next-line declaration-no-important */
   font-family: "icomoon" !important;
   font-style: normal;
@@ -49,5 +49,5 @@
   margin-left: 0.5rem;
 }
 :focus-within.simple-dropdown button::after {
-  content: "\e901";
+  content: "\e901"/"";
 }
