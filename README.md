@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm i @ryze-digital/simple-dropdown
+npm i @ryze-digital/simple-dropdown --save
 ```
 
 ## Usage
