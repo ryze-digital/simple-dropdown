@@ -30,7 +30,7 @@
     "sass": "^1.108.2"
   },
   "peerDependencies": {
-    "@ryze-digital/scss-utilities": "^1.0.0"
+    "@ryze-digital/scss-utilities": "^1.1.2"
   },
   "engines": {
     "node": ">=24.15",
