@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "icomoon";
   font-display: block;
@@ -21,7 +22,7 @@
   align-items: center;
 }
 .simple-dropdown button::before {
-  content: "\e902"/"";
+  --icon: "";
   /* stylelint-disable-next-line declaration-no-important */
   font-family: "icomoon" !important;
   font-style: normal;
@@ -32,10 +33,20 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+@supports (content: "\e902"/"") {
+  .simple-dropdown button::before {
+    --icon: "" / "";
+  }
+}
+.simple-dropdown button::before {
+  content: var(--icon);
+}
+.simple-dropdown button::before {
   margin-right: 0.5rem;
 }
 .simple-dropdown button::after {
-  content: "\e900"/"";
+  --icon: "";
   /* stylelint-disable-next-line declaration-no-important */
   font-family: "icomoon" !important;
   font-style: normal;
@@ -46,8 +57,26 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+@supports (content: "\e900"/"") {
+  .simple-dropdown button::after {
+    --icon: "" / "";
+  }
+}
+.simple-dropdown button::after {
+  content: var(--icon);
+}
+.simple-dropdown button::after {
   margin-left: 0.5rem;
 }
 :focus-within.simple-dropdown button::after {
-  content: "\e901"/"";
+  --icon: "";
+}
+@supports (content: "\e901"/"") {
+  :focus-within.simple-dropdown button::after {
+    --icon: "" / "";
+  }
+}
+:focus-within.simple-dropdown button::after {
+  content: var(--icon);
 }
