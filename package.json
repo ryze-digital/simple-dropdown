@@ -2,7 +2,7 @@
   "name": "@ryze-digital/simple-dropdown",
   "description": "[DEPRECATED] Creates a very basic CSS-only dropdown panel. Use the Popover API with CSS anchor positioning instead.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "RYZE Digital GmbH <kontakt@ryze-digital.de> (https://www.ryze-digital.de/)",
   "main": "index.js",
   "type": "module",
