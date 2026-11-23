@@ -1,5 +1,15 @@
 # RYZE Digital Simple Dropdown
 
+> [!WARNING]
+> **This package is deprecated and no longer maintained.**
+>
+> Modern browsers ship everything this package does natively: the
+> [Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) handles toggling, light dismiss, `Esc` and
+> accessibility, and [CSS anchor positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning)
+> places the panel relative to its button. No JavaScript and no Scss mixins required.
+>
+> The package stays installable, but it will not receive further updates.
+
 ![Run linter(s) workflow status](https://github.com/ryze-digital/simple-dropdown/actions/workflows/run-lint.yml/badge.svg)
 
 ## Install
